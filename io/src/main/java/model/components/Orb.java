@@ -1,6 +1,7 @@
 package model.components;
 
 import java.awt.Color;
+import java.util.Random;
 
 public class Orb {
     
@@ -8,13 +9,20 @@ public class Orb {
     private Color color;
     private int points;
 
-    public Orb(int x, int y, Color color, int points){
+    private final Color[] COLORS = {Color.red, Color.blue, Color.yellow};
+
+    public Orb(int x, int y, int points){
         this.x = x;
         this.y = y;
-        this.color = color;
+        this.color = pickRandomColor();
         this.points = points;
 
         determineRadius();
+    }
+
+    private Color pickRandomColor(){
+        int rnd = new Random().nextInt(COLORS.length);
+        return COLORS[rnd];
     }
 
     private void determineRadius(){
@@ -29,6 +37,27 @@ public class Orb {
                 break;
         }
     }
+    
+
+    public int getX(){
+        return this.x;
+    }
+
+
+    public int getY(){
+        return this.y;
+    }
+
+
+    public Color getColor(){
+        return this.color;
+    }
+
+
+    public int getRadius(){
+        return this.radius;
+    }
+
 
 
 }

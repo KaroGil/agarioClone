@@ -36,8 +36,11 @@ public class Player {
         this.radius = r;
     }
 
+    //also should check for collisions with items on the screens like the orbs:)
+
 
     public void movePlayer(int dx, int dy){
+        //should add a clause that checks whether the player doesn't move outside the screen
         this.x += dx;
         this.y += dy;
     }
