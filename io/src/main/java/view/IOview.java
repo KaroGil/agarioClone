@@ -11,6 +11,7 @@ public class IOview extends JComponent{
     private IOmodel model;
     
     public IOview(IOmodel model){
+        this.setFocusable(true);
         this.model = model;
     }
 

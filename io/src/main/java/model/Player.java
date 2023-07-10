@@ -40,7 +40,6 @@ public class Player {
     public void movePlayer(int dx, int dy){
         this.x += dx;
         this.y += dy;
-        System.out.println(x);
     }
 
     public int getX(){

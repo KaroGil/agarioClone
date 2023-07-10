@@ -20,13 +20,15 @@ public class IOController implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'keyTyped'");
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
+        // if(keyCode == KeyEvent.VK_LEFT){model.move(-1, 0);}
+        // if(keyCode == KeyEvent.VK_RIGHT){model.move(1,0);}
+        // if(keyCode == KeyEvent.VK_UP){model.move(0,-1);}
+        // if(keyCode == KeyEvent.VK_DOWN){model.move(0,1);}
         switch (keyCode) {
             case KeyEvent.VK_LEFT:
                 model.move(-1, 0);
@@ -49,8 +51,6 @@ public class IOController implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'keyReleased'");
     }
     
 }

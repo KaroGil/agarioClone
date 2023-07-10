@@ -11,7 +11,7 @@ public class AgarIOGame {
     public static void main(String[] args) {
         IOmodel model = new IOmodel();
         IOview view = new IOview(model);
-        IOController tetrisController = new IOController(model, view);
+        IOController controller = new IOController(model, view);
         
         // The JFrame is the "root" application window.
         // We here set some properties of the main window, 
