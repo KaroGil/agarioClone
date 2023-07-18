@@ -36,11 +36,7 @@ public class Player {
         this.radius = r;
     }
 
-    //also should check for collisions with items on the screens like the orbs:)
-
-
-    public void movePlayer(int dx, int dy){
-        //should add a clause that checks whether the player doesn't move outside the screen
+    public void movePlayer(int dx, int dy){        
         this.x += dx;
         this.y += dy;
     }
@@ -55,6 +51,41 @@ public class Player {
 
     public int getRadius(){
         return this.radius;
+    }
+
+    public void grow(int points){
+        if(radius < 300){
+            switch (points) {
+                case 10:
+                    setRadius(getRadius()+2);
+                    break;
+                case 20:
+                    setRadius(getRadius()+5);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    /**
+     * this method compares the radius of two players (meaning how big they are) 
+     * and returns the player with the biggest radius
+     * @param p other player 
+     * @return biggest player
+     */
+    public Player compareRadius(Player p){
+        if(this.getRadius() > p.getRadius()){
+            return this;
+        }
+        return p;
+    }
+
+    public boolean checkPLayerCollision(Player p){
+        if(this.getX() + this.getRadius() > p.getX() && (this.getX() < this.getX() + p.getRadius()) && this.getY()+ this.getRadius() > p.getY()  && this.getY() < p.getY() + p.getRadius()){
+            return true;
+        }
+        return false;
     }
 
 }

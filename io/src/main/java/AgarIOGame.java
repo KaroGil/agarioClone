@@ -19,8 +19,7 @@ public class AgarIOGame {
         JFrame frame = new JFrame(WINDOW_TITLE);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(view);
-        // JComponent view = new SampleView();
-        // frame.setContentPane(new SampleView());
+      
         frame.pack();
         frame.setVisible(true);
 

@@ -9,14 +9,13 @@ public class Orb {
     private Color color;
     private int points;
 
-    private final Color[] COLORS = {Color.red, Color.blue, Color.yellow};
+    private final Color[] COLORS = {Color.pink, Color.CYAN, Color.yellow, Color.magenta, Color.GREEN};
 
     public Orb(int x, int y, int points){
         this.x = x;
         this.y = y;
         this.color = pickRandomColor();
         this.points = points;
-
         determineRadius();
     }
 
@@ -59,5 +58,8 @@ public class Orb {
     }
 
 
+    public int getPoints(){
+        return this.points;
+    }
 
 }
